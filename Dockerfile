@@ -15,7 +15,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 	org.label-schema.description="A Docker image for Jira Software" \
 	org.label-schema.url="https://www.atlassian.com/software/jira" \
 	org.label-schema.vcs-ref=$SOURCE_COMMIT \
-	org.label-schema.vcs-url="https://github.com/ahaasler/docker-jira-software" \
+	org.label-schema.vcs-url="https://github.com/cyclic/docker-jira-software" \
 	org.label-schema.version=$SOURCE_TAG \
 	org.label-schema.schema-version="1.0"
 
