@@ -26,7 +26,7 @@ RUN curl -Lks https://www.atlassian.com/software/jira/downloads/binary/atlassian
 	&& tar -zxf /tmp/jira.tar.gz --strip=1 -C /opt/jira \
 	&& chown -R root:root /opt/jira \
 	&& chown -R 547:root /opt/jira/logs /opt/jira/temp /opt/jira/work \
-	&& chown -R jira /data/jira \
+	&& chown -R jira:jira /data/jira \
 	&& rm /tmp/jira.tar.gz
 
 # Add jira customizer and launcher
