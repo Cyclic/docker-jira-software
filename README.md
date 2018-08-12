@@ -15,7 +15,7 @@
 ## Usage
 
 ```bash
-docker run -d -p 8080:8080 ahaasler/jira-software
+docker run -d -p 8080:8080 cyclic/docker-jira-software
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ You can use this parameters to configure your jira instance:
 This parameters should be given to the entrypoint (passing them after the image):
 
 ```bash
-docker run -d -p 8080:8080 ahaasler/jira-software <parameters>
+docker run -d -p 8080:8080 cyclic/docker-jira-software <parameters>
 ```
 
 > If you want to execute another command instead of launching jira you should overwrite the entrypoint with `--entrypoint <command>` (docker run parameter).
@@ -67,7 +67,7 @@ server {
 For that configuration you should run your jira container with:
 
 ```bash
-docker run -d -p 8080:8080 ahaasler/jira-software -s -n example.com -p 443 -c jira
+docker run -d -p 8080:8080 cyclic/docker-jira-software -s -n example.com -p 443 -c jira
 ```
 
 ### Persistent data
@@ -77,7 +77,7 @@ The jira home is set to `/data/jira`. If you want to persist your data you shoul
 #### Binding a host directory
 
 ```bash
-docker run -d -p 8080:8080 -v /home/user/jira-data:/data/jira ahaasler/jira-software
+docker run -d -p 8080:8080 -v /home/user/jira-data:/data/jira cyclic/docker-jira-software
 ```
 
 Make sure that the jira user (with id 547) has read/write/execute permissions.
@@ -112,7 +112,7 @@ chown 547:root /data/jira; chmod 770 /data/jira; exit;
 2. Use it in the jira container:
 
 	```bash
-docker run --name jira --volumes-from jira-data -d -p 8080:8080 ahaasler/jira-software
+docker run --name jira --volumes-from jira-data -d -p 8080:8080 cyclic/docker-jira-software
 	```
 
 ### PostgreSQL external database
@@ -130,7 +130,7 @@ docker run --name jira-postgres -d ahaasler/jira-postgres
 2. Use it in the Jira container:
 
 	```bash
-docker run --name jira --link jira-postgres:jira-postgres -d -p 8080:8080 ahaasler/jira-software
+docker run --name jira --link jira-postgres:jira-postgres -d -p 8080:8080 cyclic/docker-jira-software
 	```
 
 3. Connect your Jira instance following the Atlassian documentation:
