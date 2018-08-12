@@ -1,5 +1,5 @@
-FROM ahaasler/jira-base:alpine-8u102b14-server-jre
-MAINTAINER Adrian Haasler García <dev@adrianhaasler.com>
+FROM cyclic/jira-base:latest
+MAINTAINER Thomas Goddard <ohmygoddard@gmail.com>
 
 # Configuration
 ENV JIRA_VERSION 7.11.2
