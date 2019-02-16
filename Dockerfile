@@ -38,7 +38,8 @@ RUN chmod +x /launch
 # Expose ports
 EXPOSE 8080
 
-VOLUME ["/var/atlassian/jira", "/opt/atlassian/jira/logs"]
+# Removed for ECS
+# VOLUME ["/var/atlassian/jira", "/opt/atlassian/jira/logs"]
 
 # Workdir
 WORKDIR /opt/jira
